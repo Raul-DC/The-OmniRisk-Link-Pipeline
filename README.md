@@ -47,11 +47,11 @@ omnIRisk-project/
 │
 ├── airflow/
 │   ├── dags/
-│   │   └── omnirisk_pipeline.py/
+│   │   └── omnirisk_pipeline.py
 │   └── logs/
 │
 ├── api/
-│   └── mock_api.py/
+│   └── mock_api.py
 │
 ├── data/
 │   ├── curated/
