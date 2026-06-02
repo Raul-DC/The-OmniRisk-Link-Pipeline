@@ -1,140 +1,141 @@
 # RESPUESTAS_CHALLENGE.md
 
 # The OmniRisk Link Pipeline
-## Respuestas Técnicas a las Consignas del Challenge
-
-Autor: Raúl Díaz
+## Respuestas a las Consignas del Challenge Técnico
 
 ---
 
 # FASE 1 — Enriquecimiento de Entidades, APIs Inestables y Protección de PII
 
-## 1. Automatización de búsqueda y resolución de entidades
+---
 
-El pipeline procesa el archivo `sap_vendors.json`, que contiene proveedores provenientes de SAP sin información de dominio web oficial.
+## Consigna 1
+
+> Automatización de Búsqueda (El Caso Leo): Para cada proveedor, automatiza la consulta a la API combinando nombre legal + país para parsear y extraer el dominio web oficial.
+
+### Respuesta
+
+El pipeline procesa el archivo `sap_vendors.json`, que contiene proveedores provenientes de SAP sin dominio web oficial.
 
 Para cada proveedor se realiza una consulta HTTP utilizando:
 
-- Nombre legal (`legal_name`)
-- País (`country`)
+- `legal_name`
+- `country`
 
-La respuesta de la API es utilizada para obtener el dominio oficial de la empresa y enriquecer el dataset.
+La respuesta de la API es utilizada para enriquecer el dataset con el dominio oficial de la organización.
 
-El procesamiento se ejecuta de forma concurrente mediante:
+El procesamiento se ejecuta concurrentemente mediante:
 
 ```python
 ThreadPoolExecutor(max_workers=10)
 ```
 
-permitiendo acelerar el enriquecimiento de múltiples proveedores simultáneamente.
+lo que permite procesar múltiples proveedores en paralelo y reducir significativamente el tiempo total de ejecución.
 
 ---
 
-## 2. Rate Limiting y resiliencia ante APIs inestables
+## Consigna 2
 
-La API simulada puede responder con errores:
+> Rate Limiting y Resiliencia de Red: La API retorna errores aleatorios 429 y 503. El script debe interpretar los headers HTTP, aplicar Exponential Backoff con ruido e implementar un Circuit Breaker que detenga peticiones si la API falla de forma persistente.
 
-- HTTP 429 (Too Many Requests)
-- HTTP 503 (Service Unavailable)
+### Respuesta
 
-Para garantizar resiliencia se implementaron los siguientes mecanismos:
+Para manejar errores transitorios y evitar sobrecargar servicios externos se implementaron los siguientes mecanismos:
 
 ### Exponential Backoff con Jitter
 
-Cuando se recibe un error temporal, el sistema espera un tiempo creciente antes de reintentar:
+Ante errores recuperables, el sistema incrementa progresivamente el tiempo de espera entre reintentos:
 
 ```text
 1s → 2s → 4s → 8s → ...
 ```
 
-Además se agrega una componente aleatoria (jitter) para evitar tormentas de reintentos simultáneos.
+Además se agrega una componente aleatoria (jitter) para evitar reintentos simultáneos.
 
 ### Lectura de Headers HTTP
 
-Cuando la API devuelve el header:
+Cuando la API responde con:
 
 ```http
 Retry-After
 ```
 
-el pipeline respeta el tiempo indicado por el servicio antes de realizar una nueva solicitud.
+el pipeline respeta el tiempo indicado antes de volver a intentar la solicitud.
 
 ### Circuit Breaker
 
-Se implementó un patrón Circuit Breaker con tres estados:
+Se implementó un patrón Circuit Breaker con los estados:
 
 - CLOSED
 - OPEN
 - HALF_OPEN
 
-Cuando se supera el umbral configurado de fallos consecutivos:
+Configuración utilizada:
 
 ```python
 CB_FAILURE_THRESHOLD = 5
+CB_RECOVERY_TIMEOUT = 15
 ```
 
-el circuito se abre y bloquea nuevas solicitudes temporalmente.
-
-Luego de:
-
-```python
-CB_RECOVERY_TIMEOUT = 15 segundos
-```
-
-se permite una solicitud de prueba para validar la recuperación del servicio.
+Cuando se alcanza el umbral de errores consecutivos, el circuito se abre temporalmente y bloquea nuevas solicitudes. Luego de transcurrido el tiempo de recuperación, se habilita una solicitud de prueba para verificar si el servicio volvió a estar disponible.
 
 ---
 
-## 3. Protección de datos sensibles (PII)
+## Consigna 3
 
-El campo:
+> Enmascaramiento de Datos Sensibles (PII): Antes de persistir, enmascara el campo tax_id_pii aplicando un hasheo criptográfico seguro SHA-256 con Salt.
+
+### Respuesta
+
+Antes de persistir la información procesada se protege el campo:
 
 ```text
 tax_id_pii
 ```
 
-contiene información tributaria sensible.
+mediante un algoritmo SHA-256 combinado con un Salt configurable.
 
-Antes de persistir los resultados se aplica:
-
-- SHA-256
-- Salt configurable mediante variable de entorno
-
-Ejemplo conceptual:
+Implementación conceptual:
 
 ```python
 sha256(SALT + tax_id)
 ```
 
-De esta forma los identificadores originales no son almacenados en los datasets procesados, reduciendo riesgos de exposición de datos personales.
+Esta estrategia permite:
+
+- Evitar almacenar identificadores tributarios en texto plano.
+- Reducir riesgos de exposición de datos personales.
+- Cumplir principios básicos de protección de información sensible.
 
 ---
 
 # FASE 2 — Big Data, Spark y Optimización
 
-## 1. Broadcast Join
+---
 
-El dataset:
+## Consigna 1
+
+> Broadcast Join: Realiza un cruce optimizado en memoria para excluir las cuentas de free_accounts.csv.gz, garantizando Cero Shuffles en red.
+
+### Respuesta
+
+El archivo:
 
 ```text
 free_accounts.csv.gz
 ```
 
-contiene cuentas que deben excluirse del análisis.
+contiene cuentas promocionales que deben excluirse del análisis.
 
-Dado que este dataset es pequeño, se utiliza Broadcast Join:
+Dado que se trata de un dataset pequeño, se utiliza Spark Broadcast Join:
 
 ```python
 broadcast(free_accounts_filtered)
 ```
 
-Beneficios:
+Esta estrategia distribuye el dataset pequeño a todos los ejecutores y evita movimientos innecesarios de datos entre nodos.
 
-- Evita movimientos innecesarios de datos entre nodos.
-- Reduce shuffles de red.
-- Mejora significativamente el rendimiento.
-
-El filtrado se realiza mediante:
+La exclusión se realiza mediante:
 
 ```python
 left_anti join
@@ -142,54 +143,60 @@ left_anti join
 
 tanto para cuentas origen como destino.
 
+Beneficios:
+
+- Menor tráfico de red.
+- Menor costo de shuffle.
+- Mejor rendimiento general del pipeline.
+
 ---
 
-## 2. Compactación de archivos (Small Files)
+## Consigna 2
 
-El pipeline escribe los datos finales en formato Parquet particionados por fecha:
+> Compactación (Small Files): Coalesce los registros diarios Parquet para asegurar un archivo grande y saludable por partición.
+
+### Respuesta
+
+La solución implementada escribe los datos finales utilizando particionado por fecha:
 
 ```python
 .partitionBy("transaction_day")
 ```
 
-Previo a la escritura se realiza:
+y previamente realiza:
 
 ```python
 .repartition("transaction_day")
 ```
 
-con el objetivo de distribuir los datos según la clave de particionado.
+para distribuir correctamente los registros antes de la escritura.
 
-Esta estrategia mejora la organización física de los datos y evita la generación excesiva de archivos pequeños.
+Esta estrategia mejora la organización física de los datos y reduce la proliferación de archivos pequeños.
 
-En entornos productivos donde se requiera un único archivo por partición podría complementarse con:
+En escenarios productivos donde se requiera exactamente un archivo por partición podría utilizarse:
 
 ```python
 coalesce(...)
 ```
 
-sin embargo, para este challenge se priorizó mantener paralelismo y estabilidad durante la escritura.
+Sin embargo, para este challenge se priorizó mantener paralelismo y estabilidad durante el proceso de escritura.
 
 ---
 
-## 3. Afinamiento teórico de un clúster YARN
+## Consigna 3
 
-### Requerimiento
+> Afinamiento del Cluster YARN: Diseña los parámetros Spark de submit para usar exactamente la mitad de un clúster físico de 3 nodos (50GB RAM y 12 Cores c/u), detallando ejecutores, memoria, overhead, preemption y colas de CapacityScheduler.
 
-Utilizar aproximadamente el 50% de un clúster compuesto por:
+### Respuesta
 
-- 3 nodos
-- 50 GB RAM por nodo
-- 12 CPU Cores por nodo
-
-Capacidad total:
+### Capacidad total del clúster
 
 | Recurso | Total |
 |----------|----------|
 | RAM | 150 GB |
 | CPU | 36 cores |
 
-Objetivo (50%):
+### Objetivo (50%)
 
 | Recurso | Objetivo |
 |----------|----------|
@@ -210,22 +217,22 @@ spark-submit \
 
 ### Justificación
 
-CPU:
+CPU utilizada:
 
 ```text
-6 ejecutores × 3 cores = 18 cores
+6 × 3 = 18 cores
 ```
 
-RAM:
+RAM utilizada:
 
 ```text
-6 ejecutores × 10 GB = 60 GB
+6 × 10 GB = 60 GB
 ```
 
 Overhead aproximado:
 
 ```text
-6 × 1 GB = 6 GB
+6 GB
 ```
 
 Driver:
@@ -234,41 +241,45 @@ Driver:
 4 GB
 ```
 
-Total:
+Total estimado:
 
 ```text
-70 GB aprox.
+70 GB
 ```
 
-Manteniéndose cerca del objetivo de utilizar la mitad del clúster.
+lo que se aproxima al objetivo de utilizar aproximadamente la mitad de los recursos disponibles.
 
 ### Capacity Scheduler
 
-Se recomienda:
+Configuración sugerida:
 
 ```xml
 yarn.scheduler.capacity.root.analytics.capacity=50
 ```
 
-reservando únicamente el 50% de la capacidad para este workload.
-
 ### Preemption
 
-Se recomienda habilitar:
+Configuración sugerida:
 
 ```xml
 yarn.resourcemanager.scheduler.monitor.enable=true
 ```
 
-permitiendo recuperar recursos cuando existan colas de mayor prioridad.
+permitiendo reasignar recursos cuando existan colas con mayor prioridad.
 
 ---
 
 # FASE 3 — Orquestación Incremental con Apache Airflow
 
-## Arquitectura del DAG
+---
 
-El DAG implementado posee tres etapas secuenciales:
+## Consigna
+
+> Construye un DAG en Apache Airflow que orqueste la ventana de 7 días de forma incremental. Debe garantizarse la idempotencia mediante lógicas de MERGE/Upsert y explicar la conexión multicloud segura mediante Identidades Federadas (OIDC) y accesos privados sin llaves estáticas de AWS/GCP.
+
+### Respuesta — DAG Incremental
+
+Se implementó un DAG compuesto por tres etapas:
 
 ```text
 enrich_vendors
@@ -278,31 +289,25 @@ process_transactions
 graph_export
 ```
 
-Cada ejecución procesa una ventana temporal controlada utilizando la fecha lógica entregada por Airflow:
+Cada ejecución utiliza la fecha lógica proporcionada por Airflow:
 
 ```text
 {{ ds }}
 ```
 
+permitiendo procesar una ventana temporal específica de forma controlada.
+
 ---
 
-## Idempotencia
+### Respuesta — Idempotencia
 
-La solución implementada garantiza re-ejecuciones limpias mediante:
+La solución implementada utiliza:
 
-### Particionado por fecha
+- Particionado por fecha.
+- Escritura overwrite controlada.
+- Reprocesamiento seguro de ventanas temporales.
 
-Los datasets procesados se almacenan utilizando:
-
-```text
-day=YYYY-MM-DD
-```
-
-como clave de particionado.
-
-### Escritura overwrite
-
-Spark utiliza:
+Configuración utilizada:
 
 ```python
 .mode("overwrite")
@@ -314,9 +319,7 @@ junto con:
 spark.sql.sources.partitionOverwriteMode=dynamic
 ```
 
-permitiendo reemplazar únicamente las particiones correspondientes al período procesado.
-
-### Evolución a MERGE/Upsert
+De esta manera, una reejecución reemplaza únicamente las particiones correspondientes al período procesado.
 
 En un entorno productivo basado en tecnologías como:
 
@@ -324,7 +327,7 @@ En un entorno productivo basado en tecnologías como:
 - Apache Iceberg
 - Apache Hudi
 
-la estrategia recomendada sería implementar operaciones:
+sería recomendable evolucionar hacia operaciones:
 
 ```sql
 MERGE
@@ -336,48 +339,47 @@ o
 UPSERT
 ```
 
-para actualizar únicamente registros modificados manteniendo históricos completos.
+para minimizar escrituras y preservar históricos completos.
 
 ---
 
-## Conexión Multicloud Segura mediante OIDC
+### Respuesta — OIDC e Identidades Federadas
 
-Para evitar el uso de credenciales estáticas se recomienda utilizar identidades federadas.
+Para evitar credenciales estáticas se recomienda utilizar identidades federadas.
 
-### AWS
-
-Utilizar:
+AWS:
 
 ```text
 IAM Roles for Service Accounts (IRSA)
 ```
 
-permitiendo que Airflow obtenga credenciales temporales sin almacenar llaves.
-
-### Google Cloud
-
-Utilizar:
+Google Cloud:
 
 ```text
 Workload Identity Federation
 ```
 
-para intercambiar tokens OIDC por credenciales temporales.
-
-### Beneficios
+Beneficios:
 
 - Eliminación de llaves permanentes.
+- Credenciales temporales.
+- Rotación automática.
 - Menor superficie de ataque.
-- Rotación automática de credenciales.
 - Cumplimiento de buenas prácticas de seguridad.
 
 ---
 
 # FASE 4 — Modelado y Análisis Temporal en Grafos
 
-## Exportación a Neo4j
+---
 
-Las relaciones procesadas por Spark son exportadas a Neo4j mediante:
+## Consigna
+
+> Carga los nodos y aristas con timestamps en Neo4j (o procesa en NetworkX). Escribe una query Cypher que identifique ciclos de retroalimentación de garantías de hasta 3 niveles de profundidad, mostrando de forma analítica la variación de montos del ciclo a lo largo de la semana (reflejando la mutación del Día 5).
+
+### Respuesta — Carga de Grafos
+
+Las relaciones procesadas por Spark son exportadas a Neo4j utilizando:
 
 ```cypher
 MERGE (a:Account)
@@ -387,29 +389,29 @@ MERGE (a)-[:GUARANTEE]->(b)
 
 almacenando:
 
-- Cuenta origen
-- Cuenta destino
-- Monto
-- Fecha
+- Cuenta origen.
+- Cuenta destino.
+- Fecha.
+- Monto.
 
 ---
 
-## Detección de ciclos de riesgo
+### Respuesta — Detección de Ciclos
 
-La implementación actual identifica ciclos de entre 2 y 3 niveles:
+La implementación actual detecta ciclos mediante:
 
 ```cypher
 MATCH p=(a:Account)-[:GUARANTEE*2..3]->(a)
 RETURN count(p) AS cycle_count
 ```
 
-Esta consulta permite detectar esquemas de garantías circulares potencialmente fraudulentos.
+lo que permite identificar estructuras circulares de garantías potencialmente riesgosas.
 
 ---
 
-## Consulta Cypher para analizar la evolución temporal de los ciclos
+### Respuesta — Variación Temporal de Montos
 
-Para visualizar la variación de montos a lo largo de la semana se propone:
+Para analizar la evolución temporal de los ciclos a lo largo de la semana se propone la siguiente consulta:
 
 ```cypher
 MATCH p=(a:Account)-[r:GUARANTEE*2..3]->(a)
@@ -424,20 +426,18 @@ RETURN
 ORDER BY day
 ```
 
-Esta consulta permite observar la evolución temporal de los montos asociados a ciclos de garantías y detectar incrementos anómalos, incluyendo la mutación introducida a partir del Día 5 en los datos generados para el challenge.
+Esta consulta permite observar cómo evolucionan los montos asociados a ciclos de garantías y facilita detectar incrementos anómalos, incluyendo la mutación introducida a partir del Día 5 en los datos del challenge.
 
 ---
 
 # Conclusión
 
-La solución desarrollada implementa:
+La solución implementada cubre los principales requerimientos planteados por el challenge:
 
 - Enriquecimiento concurrente de proveedores.
-- Manejo resiliente de APIs mediante Exponential Backoff y Circuit Breaker.
-- Protección de datos PII utilizando SHA-256 con Salt.
-- Procesamiento distribuido en Spark utilizando Broadcast Joins.
+- Resiliencia ante APIs inestables mediante Exponential Backoff y Circuit Breaker.
+- Protección de datos sensibles utilizando SHA-256 con Salt.
+- Procesamiento distribuido con Spark y Broadcast Join.
 - Orquestación incremental mediante Apache Airflow.
-- Exportación y análisis de relaciones de riesgo en Neo4j.
-- Estrategias de idempotencia y diseño de arquitectura preparada para entornos productivos multicloud.
-
-El pipeline fue desarrollado para ejecutarse completamente en entornos locales mediante Docker utilizando herramientas Open Source.
+- Modelado y análisis de relaciones de riesgo utilizando Neo4j.
+- Estrategias de idempotencia y diseño preparado para entornos productivos multicloud.
