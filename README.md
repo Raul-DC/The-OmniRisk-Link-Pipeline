@@ -1,5 +1,7 @@
 # The OmniRisk Link Pipeline
 
+<img width="1376" height="768" alt="OmniriskPipeline" src="https://github.com/user-attachments/assets/34f67f20-cee4-4fc8-8d27-84eb36d64f26" />
+
 Pipeline de análisis de riesgo financiero desarrollado para el challenge técnico **The OmniRisk Link Pipeline**.
 
 El proyecto procesa transacciones financieras, enriquece información de proveedores mediante APIs externas, genera métricas de riesgo utilizando Apache Spark y exporta relaciones de garantía a Neo4j para la detección de patrones sospechosos y ciclos de fraude.
