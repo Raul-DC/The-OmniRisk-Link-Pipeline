@@ -277,9 +277,3 @@ El pipeline produce:
 - Detección de ciclos financieros
 
 ---
-
-# Autor
-
-Raúl Díaz
-
-Challenge técnico: **The OmniRisk Link Pipeline**
