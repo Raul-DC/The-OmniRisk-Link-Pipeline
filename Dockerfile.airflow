@@ -1,0 +1,21 @@
+FROM apache/airflow:2.7.2
+
+USER root
+
+RUN apt-get update && apt-get install -y \
+    openjdk-17-jdk \
+    procps \
+    && apt-get clean
+
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
+USER airflow
+
+COPY requirements-airflow.txt .
+COPY requirements-shared.txt .
+COPY requirements-spark.txt .
+
+RUN pip install --no-cache-dir \
+    -r requirements-airflow.txt \
+    -r requirements-shared.txt \
+    -r requirements-spark.txt
