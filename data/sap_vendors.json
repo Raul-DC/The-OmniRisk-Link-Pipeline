@@ -1,0 +1,1402 @@
+[
+  {
+    "vendor_id": "VEN_100",
+    "legal_name": "Atlantica Garantias Division 100 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-100",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/100"
+  },
+  {
+    "vendor_id": "VEN_101",
+    "legal_name": "MexiCredit Corp Division 101 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-101",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/101"
+  },
+  {
+    "vendor_id": "VEN_102",
+    "legal_name": "Austral Leasing Division 102 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-102",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/102"
+  },
+  {
+    "vendor_id": "VEN_103",
+    "legal_name": "Patagonia Guarantees Division 103 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-103",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/103"
+  },
+  {
+    "vendor_id": "VEN_104",
+    "legal_name": "Boreal Insurtech Division 104 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-104",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/104"
+  },
+  {
+    "vendor_id": "VEN_105",
+    "legal_name": "MexiCredit Corp Division 105 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-105",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/105"
+  },
+  {
+    "vendor_id": "VEN_106",
+    "legal_name": "Apex Finance Group Division 106 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-106",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/106"
+  },
+  {
+    "vendor_id": "VEN_107",
+    "legal_name": "Patagonia Guarantees Division 107 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-107",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/107"
+  },
+  {
+    "vendor_id": "VEN_108",
+    "legal_name": "Pacifico Avales Division 108 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-108",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/108"
+  },
+  {
+    "vendor_id": "VEN_109",
+    "legal_name": "Apex Finance Group Division 109 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-109",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/109"
+  },
+  {
+    "vendor_id": "VEN_110",
+    "legal_name": "Andina Seguros Division 110 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-110",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/110"
+  },
+  {
+    "vendor_id": "VEN_111",
+    "legal_name": "NovaTech Solutions Division 111 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-111",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/111"
+  },
+  {
+    "vendor_id": "VEN_112",
+    "legal_name": "Austral Leasing Division 112 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-112",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/112"
+  },
+  {
+    "vendor_id": "VEN_113",
+    "legal_name": "NovaTech Solutions Division 113 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-113",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/113"
+  },
+  {
+    "vendor_id": "VEN_114",
+    "legal_name": "Pacifico Avales Division 114 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-114",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/114"
+  },
+  {
+    "vendor_id": "VEN_115",
+    "legal_name": "Atlantica Garantias Division 115 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-115",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/115"
+  },
+  {
+    "vendor_id": "VEN_116",
+    "legal_name": "Boreal Insurtech Division 116 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-116",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/116"
+  },
+  {
+    "vendor_id": "VEN_117",
+    "legal_name": "Patagonia Guarantees Division 117 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-117",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/117"
+  },
+  {
+    "vendor_id": "VEN_118",
+    "legal_name": "Sierra Venture Partners Division 118 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-118",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/118"
+  },
+  {
+    "vendor_id": "VEN_119",
+    "legal_name": "MexiCredit Corp Division 119 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-119",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/119"
+  },
+  {
+    "vendor_id": "VEN_120",
+    "legal_name": "Austral Leasing Division 120 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-120",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/120"
+  },
+  {
+    "vendor_id": "VEN_121",
+    "legal_name": "Atlantica Garantias Division 121 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-121",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/121"
+  },
+  {
+    "vendor_id": "VEN_122",
+    "legal_name": "Andina Seguros Division 122 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-122",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/122"
+  },
+  {
+    "vendor_id": "VEN_123",
+    "legal_name": "Boreal Insurtech Division 123 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-123",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/123"
+  },
+  {
+    "vendor_id": "VEN_124",
+    "legal_name": "Pacifico Avales Division 124 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-124",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/124"
+  },
+  {
+    "vendor_id": "VEN_125",
+    "legal_name": "Andina Seguros Division 125 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-125",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/125"
+  },
+  {
+    "vendor_id": "VEN_126",
+    "legal_name": "Patagonia Guarantees Division 126 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-126",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/126"
+  },
+  {
+    "vendor_id": "VEN_127",
+    "legal_name": "NovaTech Solutions Division 127 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-127",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/127"
+  },
+  {
+    "vendor_id": "VEN_128",
+    "legal_name": "Atlantica Garantias Division 128 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-128",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/128"
+  },
+  {
+    "vendor_id": "VEN_129",
+    "legal_name": "Apex Finance Group Division 129 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-129",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/129"
+  },
+  {
+    "vendor_id": "VEN_130",
+    "legal_name": "Boreal Insurtech Division 130 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-130",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/130"
+  },
+  {
+    "vendor_id": "VEN_131",
+    "legal_name": "Boreal Insurtech Division 131 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-131",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/131"
+  },
+  {
+    "vendor_id": "VEN_132",
+    "legal_name": "Atlantica Garantias Division 132 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-132",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/132"
+  },
+  {
+    "vendor_id": "VEN_133",
+    "legal_name": "Boreal Insurtech Division 133 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-133",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/133"
+  },
+  {
+    "vendor_id": "VEN_134",
+    "legal_name": "NovaTech Solutions Division 134 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-134",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/134"
+  },
+  {
+    "vendor_id": "VEN_135",
+    "legal_name": "Boreal Insurtech Division 135 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-135",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/135"
+  },
+  {
+    "vendor_id": "VEN_136",
+    "legal_name": "Andina Seguros Division 136 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-136",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/136"
+  },
+  {
+    "vendor_id": "VEN_137",
+    "legal_name": "Andina Seguros Division 137 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-137",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/137"
+  },
+  {
+    "vendor_id": "VEN_138",
+    "legal_name": "Patagonia Guarantees Division 138 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-138",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/138"
+  },
+  {
+    "vendor_id": "VEN_139",
+    "legal_name": "MexiCredit Corp Division 139 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-139",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/139"
+  },
+  {
+    "vendor_id": "VEN_140",
+    "legal_name": "Atlantica Garantias Division 140 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-140",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/140"
+  },
+  {
+    "vendor_id": "VEN_141",
+    "legal_name": "Atlantica Garantias Division 141 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-141",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/141"
+  },
+  {
+    "vendor_id": "VEN_142",
+    "legal_name": "MexiCredit Corp Division 142 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-142",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/142"
+  },
+  {
+    "vendor_id": "VEN_143",
+    "legal_name": "Austral Leasing Division 143 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-143",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/143"
+  },
+  {
+    "vendor_id": "VEN_144",
+    "legal_name": "NovaTech Solutions Division 144 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-144",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/144"
+  },
+  {
+    "vendor_id": "VEN_145",
+    "legal_name": "NovaTech Solutions Division 145 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-145",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/145"
+  },
+  {
+    "vendor_id": "VEN_146",
+    "legal_name": "Boreal Insurtech Division 146 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-146",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/146"
+  },
+  {
+    "vendor_id": "VEN_147",
+    "legal_name": "Patagonia Guarantees Division 147 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-147",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/147"
+  },
+  {
+    "vendor_id": "VEN_148",
+    "legal_name": "Patagonia Guarantees Division 148 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-148",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/148"
+  },
+  {
+    "vendor_id": "VEN_149",
+    "legal_name": "Patagonia Guarantees Division 149 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-149",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/149"
+  },
+  {
+    "vendor_id": "VEN_150",
+    "legal_name": "Atlantica Garantias Division 150 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-150",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/150"
+  },
+  {
+    "vendor_id": "VEN_151",
+    "legal_name": "Austral Leasing Division 151 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-151",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/151"
+  },
+  {
+    "vendor_id": "VEN_152",
+    "legal_name": "Atlantica Garantias Division 152 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-152",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/152"
+  },
+  {
+    "vendor_id": "VEN_153",
+    "legal_name": "Atlantica Garantias Division 153 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-153",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/153"
+  },
+  {
+    "vendor_id": "VEN_154",
+    "legal_name": "Austral Leasing Division 154 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-154",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/154"
+  },
+  {
+    "vendor_id": "VEN_155",
+    "legal_name": "Andina Seguros Division 155 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-155",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/155"
+  },
+  {
+    "vendor_id": "VEN_156",
+    "legal_name": "Apex Finance Group Division 156 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-156",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/156"
+  },
+  {
+    "vendor_id": "VEN_157",
+    "legal_name": "Austral Leasing Division 157 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-157",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/157"
+  },
+  {
+    "vendor_id": "VEN_158",
+    "legal_name": "Pacifico Avales Division 158 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-158",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/158"
+  },
+  {
+    "vendor_id": "VEN_159",
+    "legal_name": "Pacifico Avales Division 159 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-159",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/159"
+  },
+  {
+    "vendor_id": "VEN_160",
+    "legal_name": "Pacifico Avales Division 160 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-160",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/160"
+  },
+  {
+    "vendor_id": "VEN_161",
+    "legal_name": "Boreal Insurtech Division 161 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-161",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/161"
+  },
+  {
+    "vendor_id": "VEN_162",
+    "legal_name": "Patagonia Guarantees Division 162 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-162",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/162"
+  },
+  {
+    "vendor_id": "VEN_163",
+    "legal_name": "Boreal Insurtech Division 163 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-163",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/163"
+  },
+  {
+    "vendor_id": "VEN_164",
+    "legal_name": "MexiCredit Corp Division 164 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-164",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/164"
+  },
+  {
+    "vendor_id": "VEN_165",
+    "legal_name": "Boreal Insurtech Division 165 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-165",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/165"
+  },
+  {
+    "vendor_id": "VEN_166",
+    "legal_name": "Patagonia Guarantees Division 166 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-166",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/166"
+  },
+  {
+    "vendor_id": "VEN_167",
+    "legal_name": "Sierra Venture Partners Division 167 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-167",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/167"
+  },
+  {
+    "vendor_id": "VEN_168",
+    "legal_name": "Boreal Insurtech Division 168 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-168",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/168"
+  },
+  {
+    "vendor_id": "VEN_169",
+    "legal_name": "Boreal Insurtech Division 169 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-169",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/169"
+  },
+  {
+    "vendor_id": "VEN_170",
+    "legal_name": "Austral Leasing Division 170 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-170",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/170"
+  },
+  {
+    "vendor_id": "VEN_171",
+    "legal_name": "Andina Seguros Division 171 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-171",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/171"
+  },
+  {
+    "vendor_id": "VEN_172",
+    "legal_name": "Boreal Insurtech Division 172 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-172",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/172"
+  },
+  {
+    "vendor_id": "VEN_173",
+    "legal_name": "Pacifico Avales Division 173 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-173",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/173"
+  },
+  {
+    "vendor_id": "VEN_174",
+    "legal_name": "Sierra Venture Partners Division 174 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-174",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/174"
+  },
+  {
+    "vendor_id": "VEN_175",
+    "legal_name": "Pacifico Avales Division 175 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-175",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/175"
+  },
+  {
+    "vendor_id": "VEN_176",
+    "legal_name": "Andina Seguros Division 176 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-176",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/176"
+  },
+  {
+    "vendor_id": "VEN_177",
+    "legal_name": "Sierra Venture Partners Division 177 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-177",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/177"
+  },
+  {
+    "vendor_id": "VEN_178",
+    "legal_name": "Patagonia Guarantees Division 178 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-178",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/178"
+  },
+  {
+    "vendor_id": "VEN_179",
+    "legal_name": "Patagonia Guarantees Division 179 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-179",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/179"
+  },
+  {
+    "vendor_id": "VEN_180",
+    "legal_name": "MexiCredit Corp Division 180 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-180",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/180"
+  },
+  {
+    "vendor_id": "VEN_181",
+    "legal_name": "Andina Seguros Division 181 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-181",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/181"
+  },
+  {
+    "vendor_id": "VEN_182",
+    "legal_name": "Austral Leasing Division 182 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-182",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/182"
+  },
+  {
+    "vendor_id": "VEN_183",
+    "legal_name": "Apex Finance Group Division 183 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-183",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/183"
+  },
+  {
+    "vendor_id": "VEN_184",
+    "legal_name": "MexiCredit Corp Division 184 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-184",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/184"
+  },
+  {
+    "vendor_id": "VEN_185",
+    "legal_name": "Sierra Venture Partners Division 185 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-185",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/185"
+  },
+  {
+    "vendor_id": "VEN_186",
+    "legal_name": "Austral Leasing Division 186 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-186",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/186"
+  },
+  {
+    "vendor_id": "VEN_187",
+    "legal_name": "Atlantica Garantias Division 187 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-187",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/187"
+  },
+  {
+    "vendor_id": "VEN_188",
+    "legal_name": "Sierra Venture Partners Division 188 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-188",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/188"
+  },
+  {
+    "vendor_id": "VEN_189",
+    "legal_name": "Austral Leasing Division 189 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-189",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/189"
+  },
+  {
+    "vendor_id": "VEN_190",
+    "legal_name": "Austral Leasing Division 190 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-190",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/190"
+  },
+  {
+    "vendor_id": "VEN_191",
+    "legal_name": "Sierra Venture Partners Division 191 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-191",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/191"
+  },
+  {
+    "vendor_id": "VEN_192",
+    "legal_name": "Austral Leasing Division 192 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-192",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/192"
+  },
+  {
+    "vendor_id": "VEN_193",
+    "legal_name": "Apex Finance Group Division 193 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-193",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/193"
+  },
+  {
+    "vendor_id": "VEN_194",
+    "legal_name": "Andina Seguros Division 194 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-194",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/194"
+  },
+  {
+    "vendor_id": "VEN_195",
+    "legal_name": "Andina Seguros Division 195 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-195",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/195"
+  },
+  {
+    "vendor_id": "VEN_196",
+    "legal_name": "Pacifico Avales Division 196 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-196",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/196"
+  },
+  {
+    "vendor_id": "VEN_197",
+    "legal_name": "Boreal Insurtech Division 197 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-197",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/197"
+  },
+  {
+    "vendor_id": "VEN_198",
+    "legal_name": "MexiCredit Corp Division 198 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-198",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/198"
+  },
+  {
+    "vendor_id": "VEN_199",
+    "legal_name": "Atlantica Garantias Division 199 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-199",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/199"
+  },
+  {
+    "vendor_id": "VEN_200",
+    "legal_name": "Boreal Insurtech Division 200 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-200",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/200"
+  },
+  {
+    "vendor_id": "VEN_201",
+    "legal_name": "Sierra Venture Partners Division 201 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-201",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/201"
+  },
+  {
+    "vendor_id": "VEN_202",
+    "legal_name": "Patagonia Guarantees Division 202 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-202",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/202"
+  },
+  {
+    "vendor_id": "VEN_203",
+    "legal_name": "Boreal Insurtech Division 203 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-203",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/203"
+  },
+  {
+    "vendor_id": "VEN_204",
+    "legal_name": "MexiCredit Corp Division 204 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-204",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/204"
+  },
+  {
+    "vendor_id": "VEN_205",
+    "legal_name": "Apex Finance Group Division 205 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-205",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/205"
+  },
+  {
+    "vendor_id": "VEN_206",
+    "legal_name": "Andina Seguros Division 206 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-206",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/206"
+  },
+  {
+    "vendor_id": "VEN_207",
+    "legal_name": "Pacifico Avales Division 207 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-207",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/207"
+  },
+  {
+    "vendor_id": "VEN_208",
+    "legal_name": "Andina Seguros Division 208 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-208",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/208"
+  },
+  {
+    "vendor_id": "VEN_209",
+    "legal_name": "Pacifico Avales Division 209 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-209",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/209"
+  },
+  {
+    "vendor_id": "VEN_210",
+    "legal_name": "NovaTech Solutions Division 210 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-210",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/210"
+  },
+  {
+    "vendor_id": "VEN_211",
+    "legal_name": "Atlantica Garantias Division 211 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-211",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/211"
+  },
+  {
+    "vendor_id": "VEN_212",
+    "legal_name": "Pacifico Avales Division 212 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-212",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/212"
+  },
+  {
+    "vendor_id": "VEN_213",
+    "legal_name": "NovaTech Solutions Division 213 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-213",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/213"
+  },
+  {
+    "vendor_id": "VEN_214",
+    "legal_name": "Atlantica Garantias Division 214 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-214",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/214"
+  },
+  {
+    "vendor_id": "VEN_215",
+    "legal_name": "Austral Leasing Division 215 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-215",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/215"
+  },
+  {
+    "vendor_id": "VEN_216",
+    "legal_name": "Atlantica Garantias Division 216 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-216",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/216"
+  },
+  {
+    "vendor_id": "VEN_217",
+    "legal_name": "Austral Leasing Division 217 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-217",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/217"
+  },
+  {
+    "vendor_id": "VEN_218",
+    "legal_name": "Sierra Venture Partners Division 218 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-218",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/218"
+  },
+  {
+    "vendor_id": "VEN_219",
+    "legal_name": "Atlantica Garantias Division 219 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-219",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/219"
+  },
+  {
+    "vendor_id": "VEN_220",
+    "legal_name": "Austral Leasing Division 220 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-220",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/220"
+  },
+  {
+    "vendor_id": "VEN_221",
+    "legal_name": "MexiCredit Corp Division 221 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-221",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/221"
+  },
+  {
+    "vendor_id": "VEN_222",
+    "legal_name": "Austral Leasing Division 222 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-222",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/222"
+  },
+  {
+    "vendor_id": "VEN_223",
+    "legal_name": "Patagonia Guarantees Division 223 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-223",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/223"
+  },
+  {
+    "vendor_id": "VEN_224",
+    "legal_name": "Patagonia Guarantees Division 224 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-224",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/224"
+  },
+  {
+    "vendor_id": "VEN_225",
+    "legal_name": "MexiCredit Corp Division 225 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-225",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/225"
+  },
+  {
+    "vendor_id": "VEN_226",
+    "legal_name": "Sierra Venture Partners Division 226 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-226",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/226"
+  },
+  {
+    "vendor_id": "VEN_227",
+    "legal_name": "Austral Leasing Division 227 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-227",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/227"
+  },
+  {
+    "vendor_id": "VEN_228",
+    "legal_name": "Andina Seguros Division 228 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-228",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/228"
+  },
+  {
+    "vendor_id": "VEN_229",
+    "legal_name": "Boreal Insurtech Division 229 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-229",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/229"
+  },
+  {
+    "vendor_id": "VEN_230",
+    "legal_name": "Pacifico Avales Division 230 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-230",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/230"
+  },
+  {
+    "vendor_id": "VEN_231",
+    "legal_name": "Andina Seguros Division 231 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-231",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/231"
+  },
+  {
+    "vendor_id": "VEN_232",
+    "legal_name": "Boreal Insurtech Division 232 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-232",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/232"
+  },
+  {
+    "vendor_id": "VEN_233",
+    "legal_name": "NovaTech Solutions Division 233 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-233",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/233"
+  },
+  {
+    "vendor_id": "VEN_234",
+    "legal_name": "Apex Finance Group Division 234 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-234",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/234"
+  },
+  {
+    "vendor_id": "VEN_235",
+    "legal_name": "Andina Seguros Division 235 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-235",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/235"
+  },
+  {
+    "vendor_id": "VEN_236",
+    "legal_name": "Sierra Venture Partners Division 236 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-236",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/236"
+  },
+  {
+    "vendor_id": "VEN_237",
+    "legal_name": "MexiCredit Corp Division 237 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-237",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/237"
+  },
+  {
+    "vendor_id": "VEN_238",
+    "legal_name": "Andina Seguros Division 238 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-238",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/238"
+  },
+  {
+    "vendor_id": "VEN_239",
+    "legal_name": "Sierra Venture Partners Division 239 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-239",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/239"
+  },
+  {
+    "vendor_id": "VEN_240",
+    "legal_name": "Austral Leasing Division 240 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-240",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/240"
+  },
+  {
+    "vendor_id": "VEN_241",
+    "legal_name": "Patagonia Guarantees Division 241 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-241",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/241"
+  },
+  {
+    "vendor_id": "VEN_242",
+    "legal_name": "Atlantica Garantias Division 242 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-242",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/242"
+  },
+  {
+    "vendor_id": "VEN_243",
+    "legal_name": "Sierra Venture Partners Division 243 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-243",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/243"
+  },
+  {
+    "vendor_id": "VEN_244",
+    "legal_name": "NovaTech Solutions Division 244 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-244",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/244"
+  },
+  {
+    "vendor_id": "VEN_245",
+    "legal_name": "Atlantica Garantias Division 245 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-245",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/245"
+  },
+  {
+    "vendor_id": "VEN_246",
+    "legal_name": "Austral Leasing Division 246 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-246",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/246"
+  },
+  {
+    "vendor_id": "VEN_247",
+    "legal_name": "Boreal Insurtech Division 247 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-247",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/247"
+  },
+  {
+    "vendor_id": "VEN_248",
+    "legal_name": "Sierra Venture Partners Division 248 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-248",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/248"
+  },
+  {
+    "vendor_id": "VEN_249",
+    "legal_name": "Pacifico Avales Division 249 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-249",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/249"
+  },
+  {
+    "vendor_id": "VEN_250",
+    "legal_name": "Apex Finance Group Division 250 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-250",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/250"
+  },
+  {
+    "vendor_id": "VEN_251",
+    "legal_name": "NovaTech Solutions Division 251 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-251",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/251"
+  },
+  {
+    "vendor_id": "VEN_252",
+    "legal_name": "Pacifico Avales Division 252 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-252",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/252"
+  },
+  {
+    "vendor_id": "VEN_253",
+    "legal_name": "Pacifico Avales Division 253 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-253",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/253"
+  },
+  {
+    "vendor_id": "VEN_254",
+    "legal_name": "Apex Finance Group Division 254 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-254",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/254"
+  },
+  {
+    "vendor_id": "VEN_255",
+    "legal_name": "Austral Leasing Division 255 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-255",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/255"
+  },
+  {
+    "vendor_id": "VEN_256",
+    "legal_name": "Atlantica Garantias Division 256 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-256",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/256"
+  },
+  {
+    "vendor_id": "VEN_257",
+    "legal_name": "Sierra Venture Partners Division 257 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-257",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/257"
+  },
+  {
+    "vendor_id": "VEN_258",
+    "legal_name": "Patagonia Guarantees Division 258 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-258",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/258"
+  },
+  {
+    "vendor_id": "VEN_259",
+    "legal_name": "Apex Finance Group Division 259 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-259",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/259"
+  },
+  {
+    "vendor_id": "VEN_260",
+    "legal_name": "Sierra Venture Partners Division 260 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-260",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/260"
+  },
+  {
+    "vendor_id": "VEN_261",
+    "legal_name": "Atlantica Garantias Division 261 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-261",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/261"
+  },
+  {
+    "vendor_id": "VEN_262",
+    "legal_name": "Apex Finance Group Division 262 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-262",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/262"
+  },
+  {
+    "vendor_id": "VEN_263",
+    "legal_name": "Pacifico Avales Division 263 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-263",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/263"
+  },
+  {
+    "vendor_id": "VEN_264",
+    "legal_name": "Andina Seguros Division 264 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-264",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/264"
+  },
+  {
+    "vendor_id": "VEN_265",
+    "legal_name": "Pacifico Avales Division 265 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-265",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/265"
+  },
+  {
+    "vendor_id": "VEN_266",
+    "legal_name": "Pacifico Avales Division 266 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-266",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/266"
+  },
+  {
+    "vendor_id": "VEN_267",
+    "legal_name": "MexiCredit Corp Division 267 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-267",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/267"
+  },
+  {
+    "vendor_id": "VEN_268",
+    "legal_name": "MexiCredit Corp Division 268 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-268",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/268"
+  },
+  {
+    "vendor_id": "VEN_269",
+    "legal_name": "Apex Finance Group Division 269 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-269",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/269"
+  },
+  {
+    "vendor_id": "VEN_270",
+    "legal_name": "Atlantica Garantias Division 270 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-270",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/270"
+  },
+  {
+    "vendor_id": "VEN_271",
+    "legal_name": "Patagonia Guarantees Division 271 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-271",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/271"
+  },
+  {
+    "vendor_id": "VEN_272",
+    "legal_name": "Patagonia Guarantees Division 272 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-272",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/272"
+  },
+  {
+    "vendor_id": "VEN_273",
+    "legal_name": "Apex Finance Group Division 273 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-273",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/273"
+  },
+  {
+    "vendor_id": "VEN_274",
+    "legal_name": "Apex Finance Group Division 274 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-274",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/274"
+  },
+  {
+    "vendor_id": "VEN_275",
+    "legal_name": "Boreal Insurtech Division 275 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-275",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/275"
+  },
+  {
+    "vendor_id": "VEN_276",
+    "legal_name": "Patagonia Guarantees Division 276 S.A.",
+    "country": "BR",
+    "tax_id_pii": "45.882.109/0001-32-276",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/276"
+  },
+  {
+    "vendor_id": "VEN_277",
+    "legal_name": "Boreal Insurtech Division 277 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-277",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/277"
+  },
+  {
+    "vendor_id": "VEN_278",
+    "legal_name": "NovaTech Solutions Division 278 S.A.",
+    "country": "CL",
+    "tax_id_pii": "96884102-K-278",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/278"
+  },
+  {
+    "vendor_id": "VEN_279",
+    "legal_name": "Austral Leasing Division 279 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-279",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/279"
+  },
+  {
+    "vendor_id": "VEN_280",
+    "legal_name": "Austral Leasing Division 280 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-280",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/280"
+  },
+  {
+    "vendor_id": "VEN_281",
+    "legal_name": "MexiCredit Corp Division 281 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-281",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/281"
+  },
+  {
+    "vendor_id": "VEN_282",
+    "legal_name": "MexiCredit Corp Division 282 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-282",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/282"
+  },
+  {
+    "vendor_id": "VEN_283",
+    "legal_name": "Austral Leasing Division 283 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-283",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/283"
+  },
+  {
+    "vendor_id": "VEN_284",
+    "legal_name": "MexiCredit Corp Division 284 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-284",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/284"
+  },
+  {
+    "vendor_id": "VEN_285",
+    "legal_name": "Sierra Venture Partners Division 285 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-285",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/285"
+  },
+  {
+    "vendor_id": "VEN_286",
+    "legal_name": "Pacifico Avales Division 286 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-286",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/286"
+  },
+  {
+    "vendor_id": "VEN_287",
+    "legal_name": "Andina Seguros Division 287 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-287",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/287"
+  },
+  {
+    "vendor_id": "VEN_288",
+    "legal_name": "Boreal Insurtech Division 288 S.A.",
+    "country": "BR",
+    "tax_id_pii": "12.441.980/0001-09-288",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/288"
+  },
+  {
+    "vendor_id": "VEN_289",
+    "legal_name": "MexiCredit Corp Division 289 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-289",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/289"
+  },
+  {
+    "vendor_id": "VEN_290",
+    "legal_name": "Apex Finance Group Division 290 S.A.",
+    "country": "CL",
+    "tax_id_pii": "76442109-1-290",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/290"
+  },
+  {
+    "vendor_id": "VEN_291",
+    "legal_name": "Sierra Venture Partners Division 291 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-291",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/291"
+  },
+  {
+    "vendor_id": "VEN_292",
+    "legal_name": "MexiCredit Corp Division 292 S.A.",
+    "country": "MX",
+    "tax_id_pii": "MCR961023-HJ1-292",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/292"
+  },
+  {
+    "vendor_id": "VEN_293",
+    "legal_name": "Pacifico Avales Division 293 S.A.",
+    "country": "PE",
+    "tax_id_pii": "10428810231-293",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/293"
+  },
+  {
+    "vendor_id": "VEN_294",
+    "legal_name": "Austral Leasing Division 294 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-294",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/294"
+  },
+  {
+    "vendor_id": "VEN_295",
+    "legal_name": "Sierra Venture Partners Division 295 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-295",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/295"
+  },
+  {
+    "vendor_id": "VEN_296",
+    "legal_name": "Atlantica Garantias Division 296 S.A.",
+    "country": "MX",
+    "tax_id_pii": "ATG881109-KL2-296",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/296"
+  },
+  {
+    "vendor_id": "VEN_297",
+    "legal_name": "Austral Leasing Division 297 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20443198021-297",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/297"
+  },
+  {
+    "vendor_id": "VEN_298",
+    "legal_name": "Andina Seguros Division 298 S.A.",
+    "country": "PE",
+    "tax_id_pii": "20554109841-298",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/298"
+  },
+  {
+    "vendor_id": "VEN_299",
+    "legal_name": "Sierra Venture Partners Division 299 S.A.",
+    "country": "CL",
+    "tax_id_pii": "89441203-9-299",
+    "search_api_endpoint": "http://localhost:8000/mock_search_api/299"
+  }
+]
