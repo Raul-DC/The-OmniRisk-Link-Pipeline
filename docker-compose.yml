@@ -1,0 +1,72 @@
+services:
+
+  # =====================================================
+  # SPARK
+  # =====================================================
+  spark:
+    image: jupyter/pyspark-notebook:spark-3.5.0
+    container_name: spark
+
+    ports:
+      - "4040:4040"
+      - "8888:8888"
+
+    volumes:
+      - .:/workspace
+
+    working_dir: /workspace
+
+    environment:
+      - PYSPARK_PYTHON=python
+      - PYSPARK_DRIVER_PYTHON=python
+
+
+  # =====================================================
+  # AIRFLOW
+  # =====================================================
+  airflow-standalone:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - .:/opt/airflow/work
+      - airflow_logs:/opt/airflow/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=False
+      - PYTHONPATH=/opt/airflow/work
+
+    command: bash -c "airflow db migrate && airflow standalone"
+
+
+  # =====================================================
+  # NEO4J
+  # =====================================================
+  neo4j:
+    image: neo4j:5.12-community
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+    environment:
+      - NEO4J_AUTH=neo4j/<password>
+      - NEO4J_dbms_memory_heap_initial__size=512m
+      - NEO4J_dbms_memory_heap_max__size=1G
+
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  airflow_logs:
